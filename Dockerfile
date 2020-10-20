@@ -46,8 +46,8 @@ RUN apt-get update && apt-get install -y oracle-java8-installer
 WORKDIR /opt
 RUN  wget http://sourceforge.net/projects/snpeff/files/snpEff_latest_core.zip && unzip snpEff_latest_core.zip && rm snpEff_latest_core.zip
 
-RUN git clone https://github.com/konradjk/loftee.git
+RUN git clone -b grch38 https://github.com/konradjk/loftee
 
 
 COPY Dockerfile /opt/Dockerfile
-MAINTAINER lea.lenhardt.ackovic@sbgenomics.com
+MAINTAINER david.roberson@sevenbridges.com
